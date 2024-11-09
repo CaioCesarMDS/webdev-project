@@ -1,0 +1,26 @@
+/*Header*/
+
+.top-nav {
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #484848;
+}
+
+.ul-nav {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.li-nav {
+    text-decoration: none;
+    padding: .6rem 2rem;
+}
+
+.a-nav {
+    text-decoration: none;
+    color: #FFF;
+}

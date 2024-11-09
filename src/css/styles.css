@@ -1,0 +1,157 @@
+body {
+    background-color: #0a0908;
+}
+
+/* Style of Header Nav*/
+header {
+    display: flex;
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul-nav {
+    display: flex;
+    gap: 3rem;
+}
+
+.a-nav {
+    font-weight: 600;
+    transition: .2s;
+}
+
+.ul-nav .li-nav .a-nav:hover {
+    color: rgb(175, 254, 255);
+}
+
+.options {
+    display: flex;
+    position: relative;
+    left: 18rem;
+    gap: 2rem;
+}
+
+.options div {
+    cursor: pointer;
+    width: auto;
+    height: auto;
+}
+
+.options div i {
+    color: white;
+    width: 22px;
+    transition: all .2s;
+}
+
+.options div i:hover {
+    color:rgb(175, 254, 255);
+}
+
+/* Style of Home */
+
+.search-film {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.search-film input {
+    color: #000;
+    font-size: 1.4rem;
+    width: 70vw;
+}
+
+.search-film button {
+    width: 30px;
+    height: 30px;
+    margin-left: .8rem;
+}
+
+.search-film button i {
+    color: #000;
+}
+
+.home-img {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 3rem auto;
+}
+
+.cards-container .card {
+    margin: 1rem auto;
+    transition: all 0.3s;
+}
+
+.cards-container .card p {
+    color: #FFF;
+}
+
+.cards-container .card img {
+    border-radius: 15px;
+}
+
+.cards-container .card:hover{
+    scale: 1.08;
+    cursor: pointer;
+}
+
+/* Style of Indique */
+
+.suggest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem ;
+}
+
+.suggest p {
+    font-size: 2rem;
+}
+
+.suggest .form-suggest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.suggest .form-suggest form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.suggest .form-suggest form input {
+    padding: .4rem 0;
+    color: #000;
+    font-size: 1.2rem;
+}
+.suggest .form-suggest form label {
+    padding: .4rem 0;
+    font-size: 1.2rem;
+}
+
+.suggest .form-suggest button {
+    width: 120px;
+    padding: .6rem;
+    color: #000;   
+    margin-top: 2rem;
+}

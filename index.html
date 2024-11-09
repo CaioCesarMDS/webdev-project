@@ -2,38 +2,80 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CinePeso</title>
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="stylesheet" href="src/css/responsive.css" />
 
-    <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/header-style.css">
-    <link rel="stylesheet" href="src/css/responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
+    <script src="https://kit.fontawesome.com/ce734bd7c8.js" crossorigin="anonymous"></script>
 
-    <script src="src/Components/headerComponent/header.js"></script>
     <script src="src/js/index.js" defer></script>
 </head>
 
 <body>
     <header>
-        <nav class="top-nav">
+        <nav class="nav">
             <ul class="ul-nav">
-                <li class="li-nav"><a class="a-nav" href="">Home</a></li>
-                <li class="li-nav"><a class="a-nav" href="">Sobre</a></li>
-                <li class="li-nav"><a class="a-nav" href="">Cartaz</a></li>
-                <li class="li-nav"><a class="a-nav" href="">Indique um Filme</a></li>
-                <li class="li-nav"><a class="a-nav" href="">Contato</a></li>
+                <li class="li-nav"><a class="a-nav" href="#home">Home</a></li>
+                <li class="li-nav"><a class="a-nav" href="#about">Sobre</a></li>
+                <li class="li-nav"><a class="a-nav" href="#suggest">Indique um Filme</a></li>
+                <li class="li-nav"><a class="a-nav" href="#">Contato</a></li>
             </ul>
         </nav>
+        <div class="options">
+            <div> <i class="fas fa-user"></i></div>
+        </div>
     </header>
-    <main>
+    <main id="home">
+        <div class="search-film">
+            <input type="search" name="" id="">
+            <button>
+                <div> <i class="fas fa-search"></i></div>
+            </button>
+        </div>
+        <div class="home-img">
+            <img src="./src/images/ultimato.jpg" alt="" width="750" />
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <img src="./src/images/interestelar.jpg" alt="" width="200" height="300" />
+                <p>Interestelar</p>
+            </div>
+            <div class="card">
+                <img src="./src/images/reileao.jpg" alt="" width="200" height="300" />
+                <p>Rei Leão</p>
+            </div>
+            <div class="card">
+                <img src="./src/images/v&f.jpg" alt="" width="200" height="300" />
+                <p>Velozes e furiosos</p>
+            </div>
+            <div class="card">
+                <img src="./src/images/gentegrande2.jpg" alt="" width="200" height="300" />
+                <p>Gente Grande 2</p>
+            </div>
+        </div>
+        <div class="about" id="about">
 
+        </div>
+        <div class="suggest" id="suggest">
+            <p>Indique um Filme <i class="fa-solid fa-paper-plane"></i></p>
+            <div class="form-suggest">
+                <form action="">
+                    <label for="">Nome:</label>
+                    <input type="text" name="" id="">
+                    <label for="">Telefone:</label>
+                    <input type="tel" name="" id="">
+                    <label for="">Filme:</label>
+                    <input type="text" name="" id="">
+                </form>
+                <button type="submit">Enviar</button>
+            </div>
+        </div>
+        <div class="button-return-top">
+            
+        </div>
     </main>
+    <footer></footer>
 </body>
-
 
 </html>

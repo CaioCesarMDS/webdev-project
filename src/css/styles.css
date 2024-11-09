@@ -2,25 +2,58 @@ body {
     background-color: #0a0908;
 }
 
-h1 {
+header {
     display: flex;
-    height: 100%;
-    align-items: center;
+    width: 100vw;
+    height: 70px;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-main {
+.ul-nav {
+    display: flex;
+    gap: 3rem;
+}
+
+.a-nav {
+    font-weight: 600;
+    transition: .2s;
+}
+
+.ul-nav .li-nav .a-nav:hover {
+    color: black;
+}
+
+.options {
+    display: flex;
+    position: relative;
+    left: 18rem;
+    gap: 2rem;
+}
+
+.options div {
+    cursor: pointer;
+}
+
+.options div i {
     color: white;
+    transition: color .2s;
+}
+
+.options div i:hover {
+    color: black;
 }
 
 .home-img {
+    margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .home-img img {
-    max-width: 100%; /* Para tornar a imagem responsiva */
+    max-width: 100%;
     height: auto;
     border-radius: 30px;
 }

@@ -1,19 +1,42 @@
+@import "./animatios.css";
+
+@import url(https://fonts.googleapis.com/css?family=JetBrains+Mono:100,200,300,regular,500,600,700,800,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic);
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Rubi, sans-serif;
+    font-family: JetBrains Mono, sans-serif;
     text-decoration: none;
     list-style-type: none;
+    outline: none;
+    border: 0;
     overflow-x: hidden;
-    color: #FFF;
-    scroll-behavior: smooth !important;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f0f0f0;
 }
 
 a {
-    color: white;
+    color: #e5e5e5;
 }
 
-button {
+i {
+    color: #e5e5e5;
     cursor: pointer;
+    transition: color .3s;
+}
+
+i:hover {
+    color: #9a4df3;
+}
+
+h1 {
+    animation: changeColor 3s infinite alternate;
+}
+
+label {
+    font-size: 1.2rem;
 }

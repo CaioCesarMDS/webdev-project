@@ -1,81 +1,246 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="InfiCine, the best cinema in the world" />
 
-<head>
-    <link rel="stylesheet" href="src/css/reset.css" />
-    <link rel="stylesheet" href="src/css/styles.css" />
-    <link rel="stylesheet" href="src/css/responsive.css" />
+        <link rel="shortcut icon" href="./src/images/logo.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
-    <script src="https://kit.fontawesome.com/ce734bd7c8.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="src/css/reset.css" />
+        <link rel="stylesheet" href="src/css/styles.css" />
+        <link rel="stylesheet" href="src/css/responsive.css" />
 
-    <script src="src/js/index.js" defer></script>
-</head>
+        <!-- Library of icons -->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+        />
+        <script
+            src="https://kit.fontawesome.com/ce734bd7c8.js"
+            crossorigin="anonymous"
+        ></script>
 
-<body>
-    <header>
-        <nav class="nav">
-            <ul class="ul-nav">
-                <li class="li-nav"><a class="a-nav" href="index.html">Home</a></li>
-                <li class="li-nav"><a class="a-nav" href="#about">Sobre</a></li>
-                <li class="li-nav"><a class="a-nav" href="#suggest">Indique um Filme</a></li>
-                <li class="li-nav"><a class="a-nav" href="src/pages/Contato/index.html">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="options">
-            <div> <i class="fas fa-user"></i></div>
-        </div>
-    </header>
-    <main id="home">
-        <div class="search-film">
-            <input type="search" name="" id="">
-            <button>
-                <div> <i class="fas fa-search"></i></div>
-            </button>
-        </div>
-        <div class="home-img">
-            <img src="./src/images/ultimato.jpg" alt="" width="750" />
-        </div>
-        <div class="cards-container">
-            <div class="card">
-                <img src="./src/images/interestelar.jpg" alt="" width="200" height="300" />
-                <p>Interestelar</p>
+        <script src="src/js/index.js" defer></script>
+
+        <title>InfiCine</title>
+    </head>
+
+    <body>
+        <header class="header-menu">
+            <div class="logo">
+                <img src="./src/images/logo.png" alt="" width="100" />
             </div>
-            <div class="card">
-                <img src="./src/images/reileao.jpg" alt="" width="200" height="300" />
-                <p>Rei Leão</p>
+            <nav class="menu">
+                <ul class="options">
+                    <li class="option"><a href="#home">Home</a></li>
+                    <li class="option"><a href="#movies-showing">Filmes em Cartaz</a></li>
+                    <li class="option">
+                        <a href="#suggest-movie">Indique um Filme</a>
+                    </li>
+                    <li class="option">
+                        <a href="#contact">Contato</a>
+                    </li>
+                    <li class="option"><a href="#about">Sobre</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <div class="search">
+                    <input type="text" placeholder="Pesquise um filme" />
+                    <span><i class="fas fa-search"></i></span>
+                </div>
+                <div><i class="fas fa-user"></i></div>
             </div>
-            <div class="card">
-                <img src="./src/images/v&f.jpg" alt="" width="200" height="300" />
-                <p>Velozes e furiosos</p>
-            </div>
-            <div class="card">
-                <img src="./src/images/gentegrande2.jpg" alt="" width="200" height="300" />
-                <p>Gente Grande 2</p>
-            </div>
-        </div>
-        <div class="about" id="about">
+        </header>
+        <main>
+            <section class="home" id="home">
+                <h1>Venha nos conhecer!!!</h1>
+                <div class="slider">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="btn1" checked />
+                        <input type="radio" name="radio-btn" id="btn2" />
+                        <input type="radio" name="radio-btn" id="btn3" />
+                        <input type="radio" name="radio-btn" id="btn4" />
 
-        </div>
-        <div class="suggest" id="suggest">
-            <p>Indique um Filme <i class="fa-solid fa-paper-plane"></i></p>
-            <div class="form-suggest">
-                <form action="">
-                    <label for="">Nome:</label>
-                    <input type="text" name="" id="">
-                    <label for="">Telefone:</label>
-                    <input type="tel" name="" id="">
-                    <label for="">Filme:</label>
-                    <input type="text" name="" id="">
-                </form>
-                <button type="submit">Enviar</button>
-            </div>
-        </div>
-        <div class="button-return-top">
+                        <div class="slide first">
+                            <img src="./src/images/slider-images/ultimato.jpg" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img
+                                src="./src/images/slider-images/os-incriveis.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="slide">
+                            <img src="./src/images/slider-images/barbie.jpg" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="./src/images/slider-images/avatar-2.webp" alt="" />
+                        </div>
 
-        </div>
-    </main>
-    <footer></footer>
-</body>
-
+                        <div class="manual-navigation">
+                            <label for="btn1" class="manual-btn"></label>
+                            <label for="btn2" class="manual-btn"></label>
+                            <label for="btn3" class="manual-btn"></label>
+                            <label for="btn4" class="manual-btn"></label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="movies-showing" id="movies-showing">
+                <h1>Filmes em Cartaz</h1>
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="img-container">
+                            <img
+                                src="./src/images/movies-showing/interestelar.jpg"
+                                alt=""
+                                width="200"
+                                height="300"
+                            />
+                        </div>
+                        <div class="movie-info">
+                            <h3>Interestelar</h3>
+                            <p>Ficção Científica - 2h50</p>
+                            <p>Classificação: 14 anos</p>
+                            <button>Comprar Ingresso</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <img
+                                src="./src/images/movies-showing/rei-leao.jpg"
+                                alt=""
+                                width="200"
+                                height="300"
+                            />
+                        </div>
+                        <div class="movie-info">
+                            <h3>Rei Leão</h3>
+                            <p>Infantil - 1h50</p>
+                            <p>Classificação: Livre</p>
+                            <button>Comprar Ingresso</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <img
+                                src="./src/images/movies-showing/velozes-e-furiosos.jpg"
+                                alt=""
+                                width="200"
+                                height="300"
+                            />
+                        </div>
+                        <div class="movie-info">
+                            <h3>Velozes e Furiosos</h3>
+                            <p>Ação - 1h59</p>
+                            <p>Classificação: 14 anos</p>
+                            <button>Comprar Ingresso</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <img
+                                src="./src/images/movies-showing/gente-grande-2.jpg"
+                                alt=""
+                                width="200"
+                                height="300"
+                            />
+                        </div>
+                        <div class="movie-info">
+                            <h3>Gente Grande 2</h3>
+                            <p>Comédia - 1h54</p>
+                            <p>Classificação: 14 anos</p>
+                            <button>Comprar Ingresso</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <img
+                                src="./src/images/movies-showing/rambo.jpg"
+                                alt=""
+                                width="200"
+                                height="300"
+                            />
+                        </div>
+                        <div class="movie-info">
+                            <h3>Rambo (2008)</h3>
+                            <p>Ação - 2h</p>
+                            <p>Classificação: 16 anos</p>
+                            <button>Comprar Ingresso</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <img
+                                src="./src/images/movies-showing/walle.webp"
+                                alt=""
+                                width="200"
+                                height="300"
+                            />
+                        </div>
+                        <div class="movie-info">
+                            <h3>Wall-e</h3>
+                            <p>Infantil - 1h46</p>
+                            <p>Classificação: Livre</p>
+                            <button>Comprar Ingresso</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <img
+                                src="./src/images/movies-showing/american.jpg"
+                                alt=""
+                                width="200"
+                                height="300"
+                            />
+                        </div>
+                        <div class="movie-info">
+                            <h3>American Pie</h3>
+                            <p>Comédia - 1h52</p>
+                            <p>Classificação: 16 Anos</p>
+                            <button>Comprar Ingresso</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <img
+                                src="./src/images/movies-showing/chuck.webp"
+                                alt=""
+                                width="200"
+                                height="300"
+                            />
+                        </div>
+                        <div class="movie-info">
+                            <h3>Chuck</h3>
+                            <p>Terror - 1h44</p>
+                            <p>Classificação: 18 Anos</p>
+                            <button>Comprar Ingresso</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="suggest-movie" id="suggest-movie">
+                <h1>Indique um Filme <i class="fa-solid fa-paper-plane"></i></h1>
+                <div class="suggest-form">
+                    <form action="">
+                        <div class="form-field">
+                            <label for="">Nome do Filme:</label>
+                            <input type="text" name="" id="" />
+                        </div>
+                        <div class="form-field">
+                            <label for="">Descrição:</label>
+                            <input type="text" name="" id="" />
+                        </div>
+                        <div class="form-field">
+                            <label for="">Motivo:</label>
+                            <input type="text" name="" id="" />
+                        </div>
+                    </form>
+                    <button type="submit">Enviar</button>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
 </html>

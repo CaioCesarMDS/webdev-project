@@ -1,0 +1,67 @@
+.slider {
+    margin: 5rem auto;
+    width: 1200px;
+    height: 450px;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 450px;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    position: relative;
+    width: 25%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slide img {
+    width: 1200px;
+}
+
+.manual-navigation {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    margin-top: 410px;
+    gap: 40px;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.7s;
+}
+
+.manual-btn:hover {
+    background-color: #9a4df3;
+}
+
+#btn1:checked ~ .first {
+    margin-left: 0;
+}
+#btn2:checked ~ .first {
+    margin-left: -25%;
+}
+#btn3:checked ~ .first {
+    margin-left: -50%;
+}
+#btn4:checked ~ .first {
+    margin-left: -75%;
+}
+
+#btn1:checked ~ .manual-navigation label[for="btn1"],
+#btn2:checked ~ .manual-navigation label[for="btn2"],
+#btn3:checked ~ .manual-navigation label[for="btn3"],
+#btn4:checked ~ .manual-navigation label[for="btn4"] {
+    padding: 5px 10px;
+}

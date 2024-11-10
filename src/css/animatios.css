@@ -1,0 +1,7 @@
+@keyframes changeColor {
+    from {
+        color: #9a4df3;
+    } to {
+        color: #000000;
+    }
+}

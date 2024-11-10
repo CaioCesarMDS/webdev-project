@@ -1,157 +1,150 @@
-body {
-    background-color: #0a0908;
-}
+@import "./slider.css";
 
-/* Style of Header Nav*/
-header {
+/* Style of Header */
+
+.header-menu {
     display: flex;
-    width: 100vw;
-    height: 70px;
-    display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-}
-
-.ul-nav {
-    display: flex;
-    gap: 3rem;
-}
-
-.a-nav {
-    font-weight: 600;
-    transition: .2s;
-}
-
-.ul-nav .li-nav .a-nav:hover {
-    color: rgb(175, 254, 255);
+    height: 80px;
+    background-color: #0a0908;
 }
 
 .options {
     display: flex;
-    position: relative;
-    left: 18rem;
+    gap: 3rem;
+}
+
+.option a {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.option a:hover {
+    color: #9a4df3;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
     gap: 2rem;
 }
 
-.options div {
-    cursor: pointer;
-    width: auto;
-    height: auto;
+.search {
+    overflow: hidden;
 }
 
-.options div i {
-    color: white;
-    width: 22px;
-    transition: all .2s;
-}
-
-.options div i:hover {
-    color:rgb(175, 254, 255);
+.search input {
+    width: 15rem;
+    height: 30px;
+    padding-left: 0.5rem;
 }
 
 /* Style of Home */
 
-.search-film {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem;
+.home {
+    min-height: 100vh;
 }
 
-.search-film input {
-    color: #000;
-    font-size: 1.4rem;
-    width: 70vw;
+.home h1 {
+    margin: 2rem 0 0 6rem;
 }
 
-.search-film button {
-    width: 30px;
-    height: 30px;
-    margin-left: .8rem;
+/* Style of Movies Showing (Cartaz) */
+
+.movies-showing {
+    min-height: 100vh;
 }
 
-.search-film button i {
-    color: #000;
-}
-
-.home-img {
-    margin-top: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.home-img img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 30px;
+.movies-showing h1 {
+    margin: 2rem 0 0 6rem;
 }
 
 .cards-container {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    width: 90%;
     margin: 3rem auto;
 }
 
 .cards-container .card {
     margin: 1rem auto;
     transition: all 0.3s;
+    overflow: hidden;
 }
 
-.cards-container .card p {
-    color: #FFF;
-}
-
-.cards-container .card img {
+.cards-container .card .img-container {
+    width: 200px;
+    height: 300px;
     border-radius: 15px;
-}
-
-.cards-container .card:hover{
-    scale: 1.08;
+    overflow: hidden;
     cursor: pointer;
 }
+.cards-container .card img {
+    transition: scale 0.5s;
+}
 
-/* Style of Indique */
+.cards-container .card img:hover {
+    scale: 1.08;
+}
 
-.suggest {
+.cards-container .card .movie-info button {
+    margin-top: 5px;
+    padding: 0.3rem;
+    cursor: pointer;
+    background-color: #9a4df3;
+    border-radius: 5px;
+}
+
+.cards-container .card .movie-info button:hover {
+    background-color: #6a09d8;
+}
+
+/* Style of "Siggest" */
+
+.suggest-movie {
+    min-height: 100vh;
+}
+
+.suggest-movie h1 {
+    margin: 2rem 0 0 6rem;
+}
+
+.suggest-movie .suggest-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 6rem ;
+    margin-top: 10rem;
+    gap: 1rem;
 }
 
-.suggest p {
-    font-size: 2rem;
-}
-
-.suggest .form-suggest {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-}
-
-.suggest .form-suggest form {
+.suggest-movie .suggest-form form {
     display: flex;
     flex-direction: column;
     width: 300px;
+    gap: 2rem;
 }
 
-.suggest .form-suggest form input {
-    padding: .4rem 0;
-    color: #000;
-    font-size: 1.2rem;
-}
-.suggest .form-suggest form label {
-    padding: .4rem 0;
-    font-size: 1.2rem;
+.suggest-movie .suggest-form form .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
-.suggest .form-suggest button {
+.suggest-movie .suggest-form form .form-field input {
+    height: 2.5rem;
+    padding: 0 0.4rem;
+}
+
+.suggest-movie .suggest-form button {
     width: 120px;
-    padding: .6rem;
-    color: #000;   
+    padding: 0.6rem;
     margin-top: 2rem;
+    background-color: #9a4df3;
+    cursor: pointer;
+}
+
+.suggest-movie .suggest-form button:hover {
+    background-color: #6a09d8;
 }

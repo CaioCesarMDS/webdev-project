@@ -1,0 +1,45 @@
+.container {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #fff;
+  width: 400px; /* Ajusta a largura do container */
+  margin: 0 auto; /* Centraliza o container */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Faz o formulário ocupar toda a largura do container */
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  color: #fff;
+  width: 100%; /* Faz os inputs e textarea ocuparem toda a largura do formulário */
+}
+
+textarea {
+  height: 150px; /* Aumenta a altura da textarea */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Cria um espaço entre a textarea e o botão */
+}

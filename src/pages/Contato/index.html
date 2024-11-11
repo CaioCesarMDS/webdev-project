@@ -11,17 +11,29 @@
 </head>
 
 <body>
-    <header>
-        <nav class="nav">
-            <ul class="ul-nav">
-                <li class="li-nav"><a class="a-nav" href="../../../index.html">Home</a></li>
-                <li class="li-nav"><a class="a-nav" href="../../../index.html#about">Sobre</a></li>
-                <li class="li-nav"><a class="a-nav" href="../../../index.html#suggest">Indique um Filme</a></li>
-                <li class="li-nav"><a class="a-nav" href="index.html">Contato</a></li>
+    <header class="header-menu">
+        <div class="logo">
+            <img src="./src/images/logo.png" alt="" width="100" />
+        </div>
+        <nav class="menu">
+            <ul class="options">
+                <li class="option"><a href="../../../index.html#home">Home</a></li>
+                <li class="option"><a href="../../../index.html#about">Sobre</a></li>
+                <li class="option"><a href="../../../index.html#movies-showing">Filmes em Cartaz</a></li>
+                <li class="option">
+                    <a href="../../../index.html#suggest-movie">Indique um Filme</a>
+                </li>
+                <li class="option">
+                    <a href="index.html">Contato</a>
+                </li>
             </ul>
         </nav>
-        <div class="options">
-            <div> <i class="fas fa-user"></i></div>
+        <div class="user-actions">
+            <div class="search">
+                <input type="text" placeholder="Pesquise um filme" />
+                <span><i class="fas fa-search"></i></span>
+            </div>
+            <div><i class="fas fa-user"></i></div>
         </div>
     </header>
     <main>

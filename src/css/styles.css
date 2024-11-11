@@ -30,6 +30,10 @@
     gap: 2rem;
 }
 
+.user-actions i {
+    overflow: hidden;
+}
+
 .search {
     overflow: hidden;
 }
@@ -101,7 +105,34 @@
     background-color: #6a09d8;
 }
 
-/* Style of "Siggest" */
+/* Style of About */
+
+.about {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.about-inficine {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.about-inficine h3 {
+    width: 30rem;
+}
+
+.about-inficine img {
+    width: 25rem;
+    background-color: #000;
+    border-radius: 20px;
+}
+
+
+
+/* Style of "Suggest" */
 
 .suggest-movie {
     min-height: 100vh;

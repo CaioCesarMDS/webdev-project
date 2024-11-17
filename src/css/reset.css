@@ -33,6 +33,10 @@ i:hover {
     color: #9a4df3;
 }
 
+section {
+    min-height: 100vh;
+}
+
 h1 {
     animation: changeColor 3s infinite alternate;
 }

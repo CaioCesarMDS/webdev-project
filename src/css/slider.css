@@ -1,7 +1,8 @@
 .slider {
     margin: 5rem auto;
-    width: 1200px;
+    width: 80%;
     height: 450px;
+    position: relative;
 }
 
 .slides {
@@ -22,15 +23,19 @@
 }
 
 .slide img {
-    width: 1200px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .manual-navigation {
     position: absolute;
     display: flex;
     justify-content: center;
-    width: 1200px;
-    margin-top: 410px;
+    transform: translateX(-50%);
+    width: auto;
+    bottom: 15px;
+    left: 50%;
     gap: 40px;
 }
 

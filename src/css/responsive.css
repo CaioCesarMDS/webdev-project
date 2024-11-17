@@ -1,0 +1,52 @@
+@media screen and (max-width: 1200px) {
+    .menu .options .about-op,
+    .menu .options .suggest-op {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header-menu {
+        gap: 3rem;
+    }
+
+    .home h1,
+    .movies h1,
+    .suggest-movie h1,
+    .location h1 {
+        margin: 2rem 0 0 3rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 805px) {
+    .menu .options {
+        display: none;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .about-inficine {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header-menu .user-actions .search {
+        display: none;
+    }
+}

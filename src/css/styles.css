@@ -3,219 +3,215 @@
 /* Style of Header */
 
 .header-menu {
-    display: flex;
-    align-items: center;
-    height: 80px;
-    gap: 6rem;
-    justify-content: space-evenly;
-    background-color: #0a0908;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  gap: 6rem;
+  justify-content: space-evenly;
+  background-color: #0a0908;
 }
 
 .logo {
-    width: 100px;
+  width: 100px;
 }
 
 .options {
-    display: flex;
-    gap: 3rem;
+  display: flex;
+  gap: 3rem;
 }
 
 .option a {
-    font-weight: 600;
-    transition: color 0.3s;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
 .option a:hover {
-    color: #9a4df3;
+  color: #9a4df3;
 }
 
 .user-actions {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .user-actions i {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .search {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .search input {
-    width: 15rem;
-    height: 30px;
-    padding-left: 0.5rem;
+  width: 15rem;
+  height: 30px;
+  padding-left: 0.5rem;
 }
 
 /* Style of Home */
 
 .home h1 {
-    margin: 2rem 0 0 6rem;
+  margin: 2rem 0 0 6rem;
 }
 
 /* Style of Movies Showing (Cartaz) */
 
 .movies h1 {
-    margin: 2rem 0 0 6rem;
+  margin: 2rem 0 0 6rem;
 }
 
 .cards-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-    width: 90%;
-    margin: 3rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  width: 90%;
+  margin: 3rem auto;
 }
 
 .cards-container .card {
-    margin: 1rem auto;
-    transition: all 0.3s;
-    overflow: hidden;
+  margin: 1rem auto;
+  transition: all 0.3s;
+  overflow: hidden;
 }
 
 .cards-container .card .img-container {
-    width: 200px;
-    height: 300px;
-    border-radius: 15px;
-    overflow: hidden;
-    cursor: pointer;
+  width: 200px;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
 }
 .cards-container .card img {
-    transition: scale 0.5s;
+  transition: scale 0.5s;
 }
 
 .cards-container .card img:hover {
-    scale: 1.08;
+  scale: 1.08;
 }
 
 .cards-container .card .movie-info button {
-    margin-top: 5px;
-    padding: 0.3rem;
-    cursor: pointer;
-    background-color: #9a4df3;
-    border-radius: 5px;
+  margin-top: 5px;
+  padding: 0.3rem;
+  cursor: pointer;
+  background-color: #9a4df3;
+  border-radius: 5px;
 }
 
 .cards-container .card .movie-info button:hover {
-    background-color: #6a09d8;
+  background-color: #6a09d8;
 }
 
 /* Style of About */
 
 .about {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 5rem;
-    padding: 3rem;
-    gap: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5rem;
+  padding: 3rem;
+  gap: 1rem;
 }
 
 .about-inficine {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50%;
 }
 
 .about-inficine .text p {
-    font-size: 18px;
-    padding-top: 1rem;
+  font-size: 18px;
+  padding-top: 1rem;
 }
 
 .about img {
-    background-color: #000;
-    border-radius: 20px;
+  background-color: #000;
+  border-radius: 20px;
 }
 
 /* Style of "Suggest" */
 
 .suggest-movie h1 {
-    margin: 2rem 0 0 6rem;
+  margin: 2rem 0 0 6rem;
 }
 
 .suggest-movie .suggest-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10rem;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+  gap: 1rem;
 }
 
 .suggest-movie .suggest-form form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 2rem;
 }
 
 .suggest-movie .suggest-form form .form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .suggest-movie .suggest-form form .form-field input {
-    height: 2.5rem;
-    padding: 0 0.4rem;
+  height: 2.5rem;
+  padding: 0 0.4rem;
 }
 
 .suggest-movie .suggest-form button {
-    width: 120px;
-    padding: 0.6rem;
-    margin-top: 2rem;
-    background-color: #9a4df3;
-    cursor: pointer;
+  width: 120px;
+  padding: 0.6rem;
+  margin-top: 2rem;
+  background-color: #9a4df3;
+  cursor: pointer;
 }
 
 .suggest-movie .suggest-form button:hover {
-    background-color: #6a09d8;
+  background-color: #6a09d8;
 }
 
 /* Style of "location" */
 
 .location {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .location h1 {
-    margin: 2rem 0 0 6rem;
+  margin: 2rem 0 0 6rem;
 }
 
 .map {
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
 }
 
 /* Style of "footer" */
 
 .footer {
-    background-color: #0a0908;
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+  background-color: #0a0908;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
 .footer .options {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-
-
-
-
-
-
-
+p {
+  color: white;
+}

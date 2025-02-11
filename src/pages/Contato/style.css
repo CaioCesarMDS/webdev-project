@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.search span {
+  width: 100px;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -33,7 +37,7 @@ label {
   margin-bottom: 5px;
 }
 
-input,
+.container input,
 textarea {
   padding: 10px;
   margin-bottom: 15px;

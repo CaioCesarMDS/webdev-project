@@ -1,7 +1,7 @@
 const USER = "admin";
 const PASS = "1234";
 
-document.getElementById("loginForm").addEventListener("submit", function(event) {
+document.getElementById("loginForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
     const username = document.getElementById("user").value;
@@ -9,19 +9,21 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     if (username === USER && password === PASS) {
         Swal.fire({
-            title: 'Sucesso!',
-            text: 'Você fez login com sucesso.',
-            icon: 'success',
-            confirmButtonText: 'OK'
-          });
-        window.location.href = "/index.html";
+            title: "Sucesso!",
+            text: "Você fez login com sucesso.",
+            icon: "success",
+            confirmButtonText: "OK",
+        });
+        setTimeout(() => {
+            window.location.href = "/index.html";
+        }, 3000);
     } else {
         Swal.fire({
-            title: 'Erro!',
-            text: 'Usuário ou senha incorretos.',
-            icon: 'error',
-            confirmButtonText: 'OK'
-          });
+            title: "Erro!",
+            text: "Usuário ou senha incorretos.",
+            icon: "error",
+            confirmButtonText: "OK",
+        });
         document.getElementById("message").textContent = "Usuário ou senha incorretos!";
     }
 });

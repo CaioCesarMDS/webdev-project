@@ -15,6 +15,10 @@
   width: 100px;
 }
 
+.logo:hover {
+  cursor: pointer;
+}
+
 .options {
   display: flex;
   gap: 3rem;

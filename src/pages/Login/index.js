@@ -14,18 +14,33 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
             icon: "success",
             confirmButtonText: "OK",
         });
-        setTimeout(() => {
-            window.location.href = "/index.html";
-        }, 3000);
-        localStorage.setItem("isLogged", true)
+
+        const storedUsername = localStorage.getItem("userName");
+        const storedPassword = localStorage.getItem("userPassword");
+
+        if (username === storedUsername && password === storedPassword) {
+            localStorage.setItem("isLogged", true)  
+            
+            setTimeout(() => {
+                window.location.href = "/index.html";
+            }, 3000);
+        } else {
+            Swal.fire({
+                title: "Erro!",
+                text: "Usuário ou senha incorretos.",
+                icon: "error",
+                confirmButtonText: "OK",
+            });
+        }
+
+        
     } else {
         Swal.fire({
             title: "Erro!",
-            text: "Usuário ou senha incorretos.",
+            text: "Preencha todos os campos!.",
             icon: "error",
             confirmButtonText: "OK",
         });
         localStorage.setItem("isLogged", false)
-        document.getElementById("message").textContent = "Usuário ou senha incorretos!";
     }
 });

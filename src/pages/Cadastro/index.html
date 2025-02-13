@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../Contato/style.css" />
+
+    <!-- Library of icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
+    <script src="https://kit.fontawesome.com/ce734bd7c8.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <header class="header-menu">
+        <div class="logo">
+            <a href="/">
+                <img src="/src/images/logoc.png" alt="inficine logo" width="100%" />
+            </a>
+        </div>
+        <nav class="menu">
+            <ul class="options">
+                <li class="option"><a href="../../../index.html#home">Home</a></li>
+                <li class="option"><a href="../../../index.html#about">Sobre</a></li>
+                <li class="option">
+                    <a href="../../../index.html#movies-showing">Filmes em Cartaz</a>
+                </li>
+                <li class="option">
+                    <a href="../../../index.html#suggest-movie">Indique um Filme</a>
+                </li>
+                <li class="option">
+                    <a href="/src/pages/Contato/index.html">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <div class="search">
+                <input type="text" placeholder="Pesquise um filme" />
+                <span><i class="fas fa-search"></i></span>
+            </div>
+            <a href="../Login/index.html">
+                <div><i class="fas fa-user"></i></div>
+            </a>
+
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Cadastro</h1>
+            <form method="POST" action="" id="cadastroForm">
+                <label for="user">Usuário:</label>
+                <input type="text" id="user" name="user" />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" />
+
+                <label for="phone">Telefone:</label>
+                <input type="text" id="phone">
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" />  
+
+                <button type="submit">Enviar</button>  
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

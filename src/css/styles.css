@@ -102,6 +102,185 @@
   background-color: #6a09d8;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-hour {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 450px;
+  text-align: center;
+}
+
+.modal-content-ticket {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 550px;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.choice-box {
+  display: block;
+  padding: .4rem;
+  gap: 15px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.choice-box label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.choice-box input[type="radio"] {
+  width: 18px;
+  display: none;
+  cursor: pointer;
+}
+
+input[type="radio"] + span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #7c4dff;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+  position: relative;
+}
+
+input[type="radio"]:checked + span::after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #7c4dff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.continue-button {
+  background-color: #7c4dff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.continue-button:hover {
+  background-color: #6a40e0;
+}
+
+/* Container do seletor de quantidade */
+.quantity-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Estilo dos labels */
+.quantity-selector label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%; 
+  padding: 1rem;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px; 
+}
+
+.quantity-selector label p {
+  margin: 0; 
+  flex: 1; 
+  text-align: left; 
+}
+
+/* Estilo dos botões de + e - */
+.quantity-button {
+  background-color: #7c4dff;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.quantity-button:hover {
+  background-color: #6a40e0;
+}
+
+/* Estilo do campo de quantidade */
+.quantity-input {
+  width: 50px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Remove as setas do input number */
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
 /* Style of About */
 
 .about {

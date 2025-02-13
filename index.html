@@ -90,7 +90,7 @@
                         <h3>Interestelar</h3>
                         <p>Ficção Científica - 2h50</p>
                         <p>Classificação: 14 anos</p>
-                        <button>Comprar Ingresso</button>
+                        <button id="openModal">Comprar Ingresso</button>
                     </div>
                 </div>
                 <div class="card">
@@ -101,7 +101,7 @@
                         <h3>Rei Leão</h3>
                         <p>Infantil - 1h50</p>
                         <p>Classificação: Livre</p>
-                        <button>Comprar Ingresso</button>
+                        <button id="openModal">Comprar Ingresso</button>
                     </div>
                 </div>
                 <div class="card">
@@ -112,7 +112,7 @@
                         <h3>Velozes e Furiosos</h3>
                         <p>Ação - 1h59</p>
                         <p>Classificação: 14 anos</p>
-                        <button>Comprar Ingresso</button>
+                        <button id="openModal">Comprar Ingresso</button>
                     </div>
                 </div>
                 <div class="card">
@@ -123,7 +123,7 @@
                         <h3>Gente Grande 2</h3>
                         <p>Comédia - 1h54</p>
                         <p>Classificação: 14 anos</p>
-                        <button>Comprar Ingresso</button>
+                        <button id="openModal">Comprar Ingresso</button>
                     </div>
                 </div>
                 <div class="card">
@@ -134,7 +134,7 @@
                         <h3>Rambo (2008)</h3>
                         <p>Ação - 2h</p>
                         <p>Classificação: 16 anos</p>
-                        <button>Comprar Ingresso</button>
+                        <button id="openModal">Comprar Ingresso</button>
                     </div>
                 </div>
                 <div class="card">
@@ -145,7 +145,7 @@
                         <h3>Wall-e</h3>
                         <p>Infantil - 1h46</p>
                         <p>Classificação: Livre</p>
-                        <button>Comprar Ingresso</button>
+                        <button id="openModal">Comprar Ingresso</button>
                     </div>
                 </div>
                 <div class="card">
@@ -156,7 +156,7 @@
                         <h3>American Pie</h3>
                         <p>Comédia - 1h52</p>
                         <p>Classificação: 16 Anos</p>
-                        <button>Comprar Ingresso</button>
+                        <button id="openModal">Comprar Ingresso</button>
                     </div>
                 </div>
                 <div class="card">
@@ -167,9 +167,535 @@
                         <h3>Chuck</h3>
                         <p>Terror - 1h44</p>
                         <p>Classificação: 18 Anos</p>
-                        <button>Comprar Ingresso</button>
+                        <button id="openModal">Comprar Ingresso</button>
                     </div>
                 </div>
+                <div id="modalHour" class="modal">
+                    <div class="modal-content-hour">
+                        <span id="closeModal" class="close">&times;</span>
+                        <h2>Interestelar</h2>
+                        <br>
+                        <p>Escolha o horário de sua sessão:</p>
+                        <br>
+                        <div class="choice-box">
+                            <label>
+                                <input type="radio" name="opcao" value="opcao1">
+                                <span></span>
+                                14:30
+                            </label>
+                            <label>
+                                <input type="radio" name="opcao" value="opcao2">
+                                <span></span>
+                                16:10
+                            </label>
+                            <label>
+                                <input type="radio" name="opcao" value="opcao2">
+                                <span></span>
+                                18:20
+                            </label>
+                            <label>
+                                <input type="radio" name="opcao" value="opcao3">
+                                <span></span>
+                                20:50
+                            </label>
+                            <label>
+                                <input type="radio" name="opcao" value="opcao3">
+                                <span></span>
+                                21:45
+                            </label>
+                        </div>
+                        <button id="continueButton" class="continue-button">Continue</button>
+                    </div>
+                </div>
+
+                <div id="modalTicket" class="modal">
+                    <div class="modal-content-ticket">
+                        <span id="closeModalTicket" class="close">&times;</span>
+                        <div class="quantity-selector">
+                            <h2>Interestelar</h2>
+                            <label>
+                                <p>Ingresso Meia - R$ 12,00</p>
+                                <button class="quantity-button decrease">-</button>
+                                <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                                <button class="quantity-button increase">+</button>
+                            </label>
+                            <label>
+                                <p>Ingresso Inteiro - R$ 24,00</p>
+                                <button class="quantity-button decrease">-</button>
+                                <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                                <button class="quantity-button increase">+</button>
+                            </label>
+                            <label>
+                                <p>Ingresso Professor - R$ 12,00</p>
+                                <button class="quantity-button decrease">-</button>
+                                <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                                <button class="quantity-button increase">+</button>
+                            </label>
+                            <button class="continue-button">Continue</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modalHour" class="modal">
+                    <div class="modal-content-hour">
+                        <span id="closeModal" class="close">&times;</span>
+                        <h2>Rei Leão</h2>
+                        <br>
+                        <p>Escolha o horário de sua sessão:</p>
+                        <br>
+                        <div class="choice-box">
+                            <label>
+                                <input type="radio" name="opcao" value="opcao1">
+                                <span></span>
+                                14:30
+                            </label>
+                            <label>
+                                <input type="radio" name="opcao" value="opcao2">
+                                <span></span>
+                                16:10
+                            </label>
+                            <label>
+                                <input type="radio" name="opcao" value="opcao2">
+                                <span></span>
+                                18:20
+                            </label>
+                            <label>
+                                <input type="radio" name="opcao" value="opcao3">
+                                <span></span>
+                                20:50
+                            </label>
+                            <label>
+                                <input type="radio" name="opcao" value="opcao3">
+                                <span></span>
+                                21:45
+                            </label>
+                        </div>
+                        <button class="continue-button" id="continueButton">Continue</button>
+                    </div>
+                </div>
+                <div id="modalTicket" class="modal">
+                    <div class="modal-content-ticket">
+                        <span id="closeModalTicket" class="close">&times;</span>
+                        <div class="quantity-selector">
+                            <h2>Rei Leão</h2>
+                            <label>
+                                <p>Ingresso Meia - R$ 12,00</p>
+                                <button class="quantity-button decrease">-</button>
+                                <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                                <button class="quantity-button increase">+</button>
+                            </label>
+                            <label>
+                                <p>Ingresso Inteiro - R$ 24,00</p>
+                                <button class="quantity-button decrease">-</button>
+                                <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                                <button class="quantity-button increase">+</button>
+                            </label>
+                            <label>
+                                <p>Ingresso Professor - R$ 12,00</p>
+                                <button class="quantity-button decrease">-</button>
+                                <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                                <button class="quantity-button increase">+</button>
+                            </label>
+                            <button class="continue-button">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modalHour" class="modal">
+                <div class="modal-content-hour">
+                    <span id="closeModal" class="close">&times;</span>
+                    <h2>Velozes e Furiosos</h2>
+                    <br>
+                    <p>Escolha o horário de sua sessão:</p>
+                    <br>
+                    <div class="choice-box">
+                        <label>
+                            <input type="radio" name="opcao" value="opcao1">
+                            <span></span>
+                            14:30
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao2">
+                            <span></span>
+                            16:10
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao2">
+                            <span></span>
+                            18:20
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao3">
+                            <span></span>
+                            20:50
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao3">
+                            <span></span>
+                            21:45
+                        </label>
+                    </div>
+                    <button class="continue-button" id="continueButton">Continue</button>
+                </div>
+            </div>
+            <div id="modalTicket" class="modal">
+                <div class="modal-content-ticket">
+                    <span id="closeModalTicket" class="close">&times;</span>
+                    <div class="quantity-selector">
+                        <h2>Velozes e Furiosos</h2>
+                        <label>
+                            <p>Ingresso Meia - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label>
+                            <p>Ingresso Inteiro - R$ 24,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label>
+                            <p>Ingresso Professor - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <button class="continue-button">Continue</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            <div id="modalHour" class="modal">
+                <div class="modal-content-hour">
+                    <span id="closeModal" class="close">&times;</span>
+                    <h2>Gente Grande 2</h2>
+                    <br>
+                    <p>Escolha o horário de sua sessão:</p>
+                    <br>
+                    <div class="choice-box">
+                        <label>
+                            <input type="radio" name="opcao" value="opcao1">
+                            <span></span>
+                            14:30
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao2">
+                            <span></span>
+                            16:10
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao2">
+                            <span></span>
+                            18:20
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao3">
+                            <span></span>
+                            20:50
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao3">
+                            <span></span>
+                            21:45
+                        </label>
+                    </div>
+                    <button id="continueButton" class="continue-button">Continue</button>
+                </div>
+            </div>
+            <div id="modalTicket" class="modal">
+                <div class="modal-content-ticket">
+                    <span id="closeModalTicket" class="close">&times;</span>
+                    <div class="quantity-selector">
+                        <h2>Gente Grande 2</h2>
+                        <label>
+                            <p>Ingresso Meia - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label>
+                            <p>Ingresso Inteiro - R$ 24,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label>
+                            <p>Ingresso Professor - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <button class="continue-button">Continue</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            <div id="modalHour" class="modal">
+                <div class="modal-content-hour">
+                    <span id="closeModal" class="close">&times;</span>
+                    <h2>Rambo (2008)</h2>
+                    <br>
+                    <p>Escolha o horário de sua sessão:</p>
+                    <br>
+                    <div class="choice-box">
+                        <label>
+                            <input type="radio" name="opcao" value="opcao1">
+                            <span></span>
+                            14:30
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao2">
+                            <span></span>
+                            16:10
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao2">
+                            <span></span>
+                            18:20
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao3">
+                            <span></span>
+                            20:50
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao3">
+                            <span></span>
+                            21:45
+                        </label>
+                    </div>
+                    <button id="continueButton" class="continue-button">Continue</button>
+                </div>
+            </div>
+            <div id="modalTicket" class="modal">
+                <div class="modal-content-ticket">
+                    <span id="closeModalTicket" class="close">&times;</span>
+                    <div class="quantity-selector">
+                        <h2>Rambo (2008)</h2>
+                        <label>
+                            <p>Ingresso Meia - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label>
+                            <p>Ingresso Inteiro - R$ 24,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label>
+                            <p>Ingresso Professor - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <button class="continue-button">Continue</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div id="modalHour" class="modal">
+                <div class="modal-content-hour">
+                    <span id="closeModal" class="close">&times;</span>
+                    <h2>Wall-e</h2>
+                    <br>
+                    <p>Escolha o horário de sua sessão:</p>
+                    <br>
+                    <div class="choice-box">
+                        <label>
+                            <input type="radio" name="opcao" value="opcao1">
+                            <span></span>
+                            14:30
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao2">
+                            <span></span>
+                            16:10
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao2">
+                            <span></span>
+                            18:20
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao3">
+                            <span></span>
+                            20:50
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao3">
+                            <span></span>
+                            21:45
+                        </label>
+                    </div>
+                    <button id="continueButton" class="continue-button">Continue</button>
+                </div>
+            </div>
+            <div id="modalTicket" class="modal">
+                <div class="modal-content-ticket">
+                    <span id="closeModalTicket" class="close">&times;</span>
+                    <div class="quantity-selector">
+                        <h2>Wall-e</h2>
+                        <label>
+                            <p>Ingresso Meia - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label>
+                            <p>Ingresso Inteiro - R$ 24,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label>
+                            <p>Ingresso Professor - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <button class="continue-button">Continue</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            <div id="modalHour" class="modal">
+                <div class="modal-content-hour">
+                    <span id="closeModal" class="close">&times;</span>
+                    <h2>American Pie</h2>
+                    <br>
+                    <p>Escolha o horário de sua sessão:</p>
+                    <br>
+                    <div class="choice-box">
+                        <label>
+                            <input type="radio" name="opcao" value="opcao1">
+                            <span></span>
+                            14:30
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao2">
+                            <span></span>
+                            16:10
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao2">
+                            <span></span>
+                            18:20
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao3">
+                            <span></span>
+                            20:50
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao3">
+                            <span></span>
+                            21:45
+                        </label>
+                    </div>
+                    <button id="continueButton" class="continue-button">Continue</button>
+                </div>
+            </div>
+            <div id="modalTicket" class="modal">
+                <div class="modal-content-ticket">
+                    <span id="closeModalTicket" class="close">&times;</span>
+                    <div class="quantity-selector">
+                        <h2>American Pie</h2>
+                        <label>
+                            <p>Ingresso Meia - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label>
+                            <p>Ingresso Inteiro - R$ 24,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label>
+                            <p>Ingresso Professor - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <button class="continue-button">Continue</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            <div id="modalHour" class="modal">
+                <div class="modal-content-hour">
+                    <span id="closeModal" class="close">&times;</span>
+                    <h2>Chuck: O boneco assassino</h2>
+                    <br>
+                    <p>Escolha o horário de sua sessão:</p>
+                    <br>
+                    <div class="choice-box">
+                        <label>
+                            <input type="radio" name="opcao" value="opcao1">
+                            <span></span>
+                            14:30
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao2">
+                            <span></span>
+                            16:10
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao2">
+                            <span></span>
+                            18:20
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao3">
+                            <span></span>
+                            20:50
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="opcao3">
+                            <span></span>
+                            21:45
+                        </label>
+                    </div>
+                    <button class="continue-button" id="continueButton">Continue</button>
+                </div>
+            </div>
+            <div id="modalTicket" class="modal">
+                <div class="modal-content-ticket">
+                    <span id="closeModalTicket" class="close">&times;</span>
+                    <div class="quantity-selector">
+                        <h2>Chuck: O boneco assassino</h2>
+                        <label>
+                            <p>Ingresso Meia - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label>
+                            <p>Ingresso Inteiro - R$ 24,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label>
+                            <p>Ingresso Professor - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <button class="continue-button">Continue</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
             </div>
         </section>
         <section class="about" id="about">
@@ -238,7 +764,10 @@
         <section class="location">
             <h1>Nossa Localização</h1>
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1207.81942579159!2d-34.858793472814774!3d-7.945335230917489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab3dbf4a9cd5f1%3A0x45bf1641ad29a799!2sIFPE%20-%20Campus%20Paulista!5e1!3m2!1spt-BR!2sbr!4v1731792340932!5m2!1spt-BR!2sbr" width="80%" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1207.81942579159!2d-34.858793472814774!3d-7.945335230917489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab3dbf4a9cd5f1%3A0x45bf1641ad29a799!2sIFPE%20-%20Campus%20Paulista!5e1!3m2!1spt-BR!2sbr!4v1731792340932!5m2!1spt-BR!2sbr"
+                    width="80%" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
@@ -261,7 +790,6 @@
         </nav>
         <p id="footer-text">&copy; 2024 InfiCine. Todos os direitos reservados.</p>
     </footer>
-
 </body>
 
 </html>

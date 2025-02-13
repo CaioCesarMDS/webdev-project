@@ -18,6 +18,10 @@
             src="https://kit.fontawesome.com/ce734bd7c8.js"
             crossorigin="anonymous"
         ></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+        <script src="./index.js" defer></script>
     </head>
 
     <body>
@@ -38,7 +42,7 @@
                         <a href="../../../index.html#suggest-movie">Indique um Filme</a>
                     </li>
                     <li class="option">
-                        <a href="index.html">Contato</a>
+                        <a href="/">Contato</a>
                     </li>
                 </ul>
             </nav>
@@ -48,21 +52,17 @@
                     <span><i class="fas fa-search"></i></span>
                 </div>
                 <div>
-                    <a href="../../pages/Perfil/index.html">
+                    <a href="../../pages/Login/index.html">
                         <i class="fas fa-user"></i>
                     </a>
                 </div>
-                <div>
-                    <a href="../../pages/LoginCadastro/index.html">
-                        <i class="fas fa-right-to-bracket"></i>
-                    </a>
-                </div>
+               
             </div>
         </header>
         <main>
             <div class="container">
                 <h1>Entre em Contato</h1>
-                <form method="POST" action="">
+                <form method="POST" action="" id="contatoForm">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required />
 

@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../../css/responsive.css" />
         <link rel="stylesheet" href="../../css/reset.css" />
         <link rel="stylesheet" href="../Contato/style.css" />
+        <link rel="stylesheet" href="style.css">
 
         <!-- Library of icons -->
         <link
@@ -42,7 +43,7 @@
                         <a href="../../../index.html#suggest-movie">Indique um Filme</a>
                     </li>
                     <li class="option">
-                        <a href="index.html">Contato</a>
+                        <a href="/src/pages/Contato/index.html">Contato</a>
                     </li>
                 </ul>
             </nav>
@@ -51,11 +52,7 @@
                     <input type="text" placeholder="Pesquise um filme" />
                     <span><i class="fas fa-search"></i></span>
                 </div>
-                <div>
-                    <a href="src/pages/LoginCadastro/index.html">
-                        <i class="fas fa-right-to-bracket"></i>
-                    </a>
-                </div>
+                <div><i class="fas fa-user"></i></div>
             </div>
         </header>
         <main>
@@ -63,12 +60,15 @@
                 <h1>Login</h1>
                 <form method="POST" action="" id="loginForm">
                     <label for="user">Usuário:</label>
-                    <input type="text" id="user" name="user"  />
+                    <input type="text" id="user" name="user" required  />
 
                     <label for="password">Senha:</label>
-                    <input type="password" id="password" name="password" />  
+                    <input type="password" id="password" name="password" required/>  
 
-                    <button type="submit">Enviar</button>  
+                    <button type="submit">Enviar</button> 
+                    <a href="../Cadastro/index.html">
+                        <label for="" id="cadas">Cadastrar-se?</label> 
+                    </a>
                 </form>
             </div>
         </main>

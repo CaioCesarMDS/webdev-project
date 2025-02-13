@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     openModal.forEach((btn, index) => {
         btn.addEventListener('click', () => {
-            if (localStorage.getItem("isLogged")) {
+            if (localStorage.getItem("isLogged") === "true") {
                 modal[index].style.display = 'flex';
             } else {
                 Swal.fire({

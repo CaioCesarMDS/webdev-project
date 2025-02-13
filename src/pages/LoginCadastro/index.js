@@ -17,6 +17,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
         setTimeout(() => {
             window.location.href = "/index.html";
         }, 3000);
+        localStorage.setItem("isLogged", true)
     } else {
         Swal.fire({
             title: "Erro!",
@@ -24,6 +25,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
             icon: "error",
             confirmButtonText: "OK",
         });
+        localStorage.setItem("isLogged", false)
         document.getElementById("message").textContent = "Usuário ou senha incorretos!";
     }
 });

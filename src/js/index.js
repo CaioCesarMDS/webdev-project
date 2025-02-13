@@ -34,6 +34,28 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeModalTicket = document.querySelectorAll('#closeModalTicket');
     const continueButtonEl = document.querySelectorAll('#continueButton')
     const radioOptionEl = document.querySelectorAll('#radioOption');
+    const finalyPurchaseEL = document.querySelectorAll('.finaly-purchase');
+
+    finalyPurchaseEL.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            if(Array.from(quantityInput).some(input => input.value > 0)) {
+                modalTicket.forEach((modal) => {
+                    modal.style.display = 'none';
+                    Swal.fire({
+                        title: "Compra efetuada!",
+                        text: "Você fez compra de seu(s) ingresso(s)!",
+                        confirmButtonText: "OK",
+                    });
+                })
+            } else {
+                Swal.fire({
+                    title: "Selecione seu(s) ingresso(s)!",
+                    text: "Para comprar é necessário escolher seu(s) ingresso(s)!",
+                    confirmButtonText: "OK",
+                });
+            }
+        })
+    })
 
     radioOptionEl.forEach((radio) => {
         console.log(radio.checked)
@@ -53,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 Swal.fire({
                     title: "Faça Login!",
                     text: "É necessário fazer login para efetuar a compra de um ingresso!",
-                    icon: "error",
                     confirmButtonText: "OK",
                 });
             }
@@ -75,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 Swal.fire({
                     title: "Erro!",
                     text: "É necessário selecionar uma sessão",
-                    icon: "error",
                     confirmButtonText: "OK",
                 });
             }

@@ -47,7 +47,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     openModal.forEach((btn, index) => {
         btn.addEventListener('click', () => {
-            modal[index].style.display = 'flex';
+            if (localStorage.getItem("isLogged")) {
+                modal[index].style.display = 'flex';
+            } else {
+                Swal.fire({
+                    title: "Faça Login!",
+                    text: "É necessário fazer login para efetuar a compra de um ingresso!",
+                    icon: "error",
+                    confirmButtonText: "OK",
+                });
+            }
         });
     });
 

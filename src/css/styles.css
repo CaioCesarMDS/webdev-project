@@ -212,6 +212,24 @@ input[type="radio"]:checked + span::after {
   background-color: #6a40e0;
 }
 
+.finaly-purchase {
+  background-color: #7c4dff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.finaly-purchase:hover {
+  background-color: #6a40e0;
+}
+
+
+
 /* Container do seletor de quantidade */
 .quantity-selector {
   display: flex;
@@ -335,6 +353,11 @@ input[type="radio"]:checked + span::after {
   gap: 2rem;
 }
 
+.suggest-movie .suggest-form .div-button-form {
+  display: flex;
+  justify-content: center;
+}
+
 .suggest-movie .suggest-form form .form-field {
   display: flex;
   flex-direction: column;
@@ -346,7 +369,7 @@ input[type="radio"]:checked + span::after {
   padding: 0 0.4rem;
 }
 
-.suggest-movie .suggest-form button {
+.suggest-movie .suggest-form form button {
   width: 120px;
   padding: 0.6rem;
   margin-top: 2rem;
@@ -354,7 +377,7 @@ input[type="radio"]:checked + span::after {
   cursor: pointer;
 }
 
-.suggest-movie .suggest-form button:hover {
+.suggest-movie .suggest-form form button:hover {
   background-color: #6a09d8;
 }
 
@@ -375,6 +398,7 @@ input[type="radio"]:checked + span::after {
   align-self: center;
   justify-content: center;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 /* Style of "footer" */

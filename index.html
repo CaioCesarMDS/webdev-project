@@ -1,63 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="InfiCine, the best cinema in the world" />
 
-        <link rel="shortcut icon" href="./src/images/logo.png" type="image/x-icon" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="InfiCine, the best cinema in the world" />
 
-        <link rel="stylesheet" href="src/css/reset.css" />
-        <link rel="stylesheet" href="src/css/styles.css" />
-        <link rel="stylesheet" href="src/css/responsive.css" />
+    <link rel="shortcut icon" href="./src/images/logo.png" type="image/x-icon" />
 
-        <!-- Library of icons -->
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
-        />
-        <script
-            src="https://kit.fontawesome.com/ce734bd7c8.js"
-            crossorigin="anonymous"
-        ></script>
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="stylesheet" href="src/css/responsive.css" />
 
-        <script src="src/js/index.js" defer></script>
+    <!-- Library of icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
+    <script src="https://kit.fontawesome.com/ce734bd7c8.js" crossorigin="anonymous"></script>
 
-        <title>InfiCine</title>
-    </head>
+    <script src="src/js/index.js" defer></script>
 
-    <body>
-        <header class="header-menu">
-            <div class="logo">
-                <a href="/" >
-                    <img src="./src/images/logoc.png" alt="inficine logo" width="100%" />
+    <title>InfiCine</title>
+</head>
+
+<body>
+    <header class="header-menu">
+        <div class="logo">
+            <a href="/">
+                <img src="./src/images/logoc.png" alt="inficine logo" width="100%" />
+            </a>
+        </div>
+        <nav class="menu">
+            <ul class="options">
+                <li class="option"><a href="#home">Home</a></li>
+                <li class="option"><a href="#movies">Filmes</a></li>
+                <li class="option about-op"><a href="#about">Sobre</a></li>
+                <li class="option suggest-op">
+                    <a href="#suggest-movie">Indique um Filme</a>
+                </li>
+                <li class="option">
+                    <a href="src/pages/Contato/index.html">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <div class="search">
+                <input type="text" placeholder="Pesquise um filme" />
+                <span><i class="fas fa-search"></i></span>
+            </div>
+            <div>
+                <a href="src/pages/Login/index.html">
+                    <i class="fas fa-user"></i>
                 </a>
             </div>
-            <nav class="menu">
-                <ul class="options">
-                    <li class="option"><a href="#home">Home</a></li>
-                    <li class="option"><a href="#movies">Filmes</a></li>
-                    <li class="option about-op"><a href="#about">Sobre</a></li>
-                    <li class="option suggest-op">
-                        <a href="#suggest-movie">Indique um Filme</a>
-                    </li>
-                    <li class="option">
-                        <a href="src/pages/Contato/index.html">Contato</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="user-actions">
-                <div class="search">
-                    <input type="text" placeholder="Pesquise um filme" />
-                    <span><i class="fas fa-search"></i></span>
-                </div>
-                <div>
-                    <a href="src/pages/Login/index.html">
-                        <i class="fas fa-user"></i>
-                    </a>
+        </div>
+    </header>
+    <main>
+        <section class="home" id="home">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="btn1" checked />
+                    <input type="radio" name="radio-btn" id="btn2" />
+                    <input type="radio" name="radio-btn" id="btn3" />
+                    <input type="radio" name="radio-btn" id="btn4" />
+
+                    <div class="slide first">
+                        <img src="./src/images/slider-images/ultimato.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./src/images/slider-images/os-incriveis.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./src/images/slider-images/barbie.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./src/images/slider-images/avatar-2.webp" alt="" />
+                    </div>
+
+                    <div class="manual-navigation">
+                        <label for="btn1" class="manual-btn"></label>
+                        <label for="btn2" class="manual-btn"></label>
+                        <label for="btn3" class="manual-btn"></label>
+                        <label for="btn4" class="manual-btn"></label>
+                    </div>
                 </div>
             </div>
-<<<<<<< HEAD
         </section>
         <section class="movies" id="movies">
             <h1>Filmes em Cartaz</h1>
@@ -710,95 +735,33 @@
                         frequentemente realizamos sessões temáticas, pré-estreias e
                         atividades para fãs de cinema de todas as idades.
                     </p>
-=======
-        </header>
-        <main>
-            <section class="home" id="home">
-                <div class="slider">
-                    <div class="slides">
-                        <input type="radio" name="radio-btn" id="btn1" checked />
-                        <input type="radio" name="radio-btn" id="btn2" />
-                        <input type="radio" name="radio-btn" id="btn3" />
-                        <input type="radio" name="radio-btn" id="btn4" />
->>>>>>> 56babbaa76cba0ef26e6535bed3622cfc054f37c
 
-                        <div class="slide first">
-                            <img src="./src/images/slider-images/ultimato.jpg" alt="" />
-                        </div>
-                        <div class="slide">
-                            <img
-                                src="./src/images/slider-images/os-incriveis.jpg"
-                                alt=""
-                            />
-                        </div>
-                        <div class="slide">
-                            <img src="./src/images/slider-images/barbie.jpg" alt="" />
-                        </div>
-                        <div class="slide">
-                            <img src="./src/images/slider-images/avatar-2.webp" alt="" />
-                        </div>
-
-                        <div class="manual-navigation">
-                            <label for="btn1" class="manual-btn"></label>
-                            <label for="btn2" class="manual-btn"></label>
-                            <label for="btn3" class="manual-btn"></label>
-                            <label for="btn4" class="manual-btn"></label>
-                        </div>
-                    </div>
+                    <p>
+                        Nosso objetivo é proporcionar uma experiência que vai além do
+                        filme, unindo pessoas e criando memórias em cada sessão.
+                        Navegue pelo site, explore nossa programação e faça parte do
+                        nosso universo cinematográfico!
+                    </p>
                 </div>
-            </section>
-            <section class="movies" id="movies">
-                <h1>Filmes em Cartaz</h1>
-                <div class="cards-container">
-                    <div class="card">
-                        <div class="img-container">
-                            <img
-                                src="./src/images/movies-showing/interestelar.jpg"
-                                alt=""
-                                width="200"
-                                height="300"
-                            />
-                        </div>
-                        <div class="movie-info">
-                            <h3>Interestelar</h3>
-                            <p>Ficção Científica - 2h50</p>
-                            <p>Classificação: 14 anos</p>
-                            <button>Comprar Ingresso</button>
-                        </div>
+            </div>
+            <img src="src/images/logoc.png" alt="InfiCine logo" width="30%" />
+        </section>
+        <section class="suggest-movie" id="suggest-movie">
+            <h1>Indique um Filme <i class="fa-solid fa-paper-plane"></i></h1>
+            <div class="suggest-form">
+                <form action="">
+                    <div class="form-field">
+                        <label for="">Nome do Filme:</label>
+                        <input type="text" name="" id="" />
                     </div>
-                    <div class="card">
-                        <div class="img-container">
-                            <img
-                                src="./src/images/movies-showing/rei-leao.jpg"
-                                alt=""
-                                width="200"
-                                height="300"
-                            />
-                        </div>
-                        <div class="movie-info">
-                            <h3>Rei Leão</h3>
-                            <p>Infantil - 1h50</p>
-                            <p>Classificação: Livre</p>
-                            <button>Comprar Ingresso</button>
-                        </div>
+                    <div class="form-field">
+                        <label for="">Descrição:</label>
+                        <input type="text" name="" id="" />
                     </div>
-                    <div class="card">
-                        <div class="img-container">
-                            <img
-                                src="./src/images/movies-showing/velozes-e-furiosos.jpg"
-                                alt=""
-                                width="200"
-                                height="300"
-                            />
-                        </div>
-                        <div class="movie-info">
-                            <h3>Velozes e Furiosos</h3>
-                            <p>Ação - 1h59</p>
-                            <p>Classificação: 14 anos</p>
-                            <button>Comprar Ingresso</button>
-                        </div>
+                    <div class="form-field">
+                        <label for="">Motivo:</label>
+                        <input type="text" name="" id="" />
                     </div>
-<<<<<<< HEAD
                 </form>
                 <button type="submit">Enviar</button>
             </div>
@@ -835,186 +798,3 @@
 </body>
 
 </html>
-=======
-                    <div class="card">
-                        <div class="img-container">
-                            <img
-                                src="./src/images/movies-showing/gente-grande-2.jpg"
-                                alt=""
-                                width="200"
-                                height="300"
-                            />
-                        </div>
-                        <div class="movie-info">
-                            <h3>Gente Grande 2</h3>
-                            <p>Comédia - 1h54</p>
-                            <p>Classificação: 14 anos</p>
-                            <button>Comprar Ingresso</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img-container">
-                            <img
-                                src="./src/images/movies-showing/rambo.jpg"
-                                alt=""
-                                width="200"
-                                height="300"
-                            />
-                        </div>
-                        <div class="movie-info">
-                            <h3>Rambo (2008)</h3>
-                            <p>Ação - 2h</p>
-                            <p>Classificação: 16 anos</p>
-                            <button>Comprar Ingresso</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img-container">
-                            <img
-                                src="./src/images/movies-showing/walle.webp"
-                                alt=""
-                                width="200"
-                                height="300"
-                            />
-                        </div>
-                        <div class="movie-info">
-                            <h3>Wall-e</h3>
-                            <p>Infantil - 1h46</p>
-                            <p>Classificação: Livre</p>
-                            <button>Comprar Ingresso</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img-container">
-                            <img
-                                src="./src/images/movies-showing/american.jpg"
-                                alt=""
-                                width="200"
-                                height="300"
-                            />
-                        </div>
-                        <div class="movie-info">
-                            <h3>American Pie</h3>
-                            <p>Comédia - 1h52</p>
-                            <p>Classificação: 16 Anos</p>
-                            <button>Comprar Ingresso</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img-container">
-                            <img
-                                src="./src/images/movies-showing/chuck.webp"
-                                alt=""
-                                width="200"
-                                height="300"
-                            />
-                        </div>
-                        <div class="movie-info">
-                            <h3>Chuck</h3>
-                            <p>Terror - 1h44</p>
-                            <p>Classificação: 18 Anos</p>
-                            <button>Comprar Ingresso</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="about" id="about">
-                <div class="about-inficine">
-                    <h2>Bem-vindo ao InfiCine! 🎬✨</h2>
-                    <div class="text">
-                        <p>
-                            Aqui, você encontra mais do que um lugar para assistir aos
-                            melhores lançamentos — nosso cinema é um espaço dedicado a
-                            quem ama viver experiências únicas através dos filmes. Além de
-                            uma programação completa com os sucessos de bilheteria e
-                            títulos independentes, oferecemos um ambiente confortável e
-                            acolhedor, com salas projetadas para proporcionar a melhor
-                            experiência audiovisual, som de alta qualidade e poltronas
-                            pensadas para o seu conforto.
-                        </p>
-                        <p>
-                            Nós entendemos que cada espectador é único, e é por isso que
-                            damos a você o poder de fazer parte da nossa programação. Na
-                            nossa seção Solicite Seu Filme, você pode nos indicar os
-                            títulos que gostaria de ver em cartaz, sejam clássicos
-                            inesquecíveis, filmes cult ou até mesmo um sucesso recente que
-                            gostaria de rever. Adoramos ouvir sugestões, e sua opinião nos
-                            ajuda a criar uma programação especial e sob medida para a
-                            comunidade de cinéfilos que frequenta nossas salas.
-                        </p>
-                        <p>
-                            Para tornar tudo ainda mais prático, nosso site também permite
-                            que você compre seus ingressos de forma rápida e segura.
-                            Assim, você evita filas e garante seu lugar no filme desejado.
-                            Fique de olho nas promoções e eventos exclusivos, pois
-                            frequentemente realizamos sessões temáticas, pré-estreias e
-                            atividades para fãs de cinema de todas as idades.
-                        </p>
-
-                        <p>
-                            Nosso objetivo é proporcionar uma experiência que vai além do
-                            filme, unindo pessoas e criando memórias em cada sessão.
-                            Navegue pelo site, explore nossa programação e faça parte do
-                            nosso universo cinematográfico!
-                        </p>
-                    </div>
-                </div>
-                <img src="src/images/logoc.png" alt="InfiCine logo" width="30%" />
-            </section>
-            <section class="suggest-movie" id="suggest-movie">
-                <h1>Indique um Filme <i class="fa-solid fa-paper-plane"></i></h1>
-                <div class="suggest-form">
-                    <form action="">
-                        <div class="form-field">
-                            <label for="">Nome do Filme:</label>
-                            <input type="text" name="" id="" />
-                        </div>
-                        <div class="form-field">
-                            <label for="">Descrição:</label>
-                            <input type="text" name="" id="" />
-                        </div>
-                        <div class="form-field">
-                            <label for="">Motivo:</label>
-                            <input type="text" name="" id="" />
-                        </div>
-                    </form>
-                    <button type="submit">Enviar</button>
-                </div>
-            </section>
-            <section class="location">
-                <h1>Nossa Localização</h1>
-                <div class="map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1207.81942579159!2d-34.858793472814774!3d-7.945335230917489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab3dbf4a9cd5f1%3A0x45bf1641ad29a799!2sIFPE%20-%20Campus%20Paulista!5e1!3m2!1spt-BR!2sbr!4v1731792340932!5m2!1spt-BR!2sbr"
-                        width="80%"
-                        height="450"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="logo">
-                <img src="./src/images/logoc.png" alt="inficine logo" width="100%" />
-            </div>
-            <nav>
-                <ul class="options">
-                    <li class="option"><a href="#home">Home</a></li>
-                    <li class="option"><a href="#movies">Filmes</a></li>
-                    <li class="option about-op"><a href="#about">Sobre</a></li>
-                    <li class="option suggest-op">
-                        <a href="#suggest-movie">Indique um Filme</a>
-                    </li>
-                    <li class="option">
-                        <a href="src/pages/Contato/index.html">Contato</a>
-                    </li>
-                </ul>
-            </nav>
-            <p id="footer-text">&copy; 2024 InfiCine. Todos os direitos reservados.</p>
-        </footer>
-    </body>
-</html>
->>>>>>> 56babbaa76cba0ef26e6535bed3622cfc054f37c

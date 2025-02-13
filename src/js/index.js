@@ -4,6 +4,26 @@ const totalSlides = 4;
 const intervalTime = 3000;
 const slider = document.querySelector(".slider");
 const homeSection = document.querySelector("section.home");
+const iconLogin = document.getElementById("iconLogin")
+
+iconLogin.addEventListener("click", () => {
+    if (localStorage.getItem("isLogged") === "true") {
+        localStorage.setItem("isLogged", false)
+        Swal.fire({
+            title: "Sair!",
+            text: "Você saiu",
+            icon: "success",
+            confirmButtonText: "OK",
+        });
+    } else {
+        Swal.fire({
+            title: "Sair!",
+            text: "Para sair você precisa estar logado!",
+            icon: "error",
+            confirmButtonText: "OK",
+        });
+    }
+})
 
 function changeSlide() {
     const slides = document.querySelectorAll(".slide");
@@ -47,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     openModal.forEach((btn, index) => {
         btn.addEventListener('click', () => {
-            if (localStorage.getItem("isLogged")) {
+            if (localStorage.getItem("isLogged") === "true") {
                 modal[index].style.display = 'flex';
             } else {
                 Swal.fire({

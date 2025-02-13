@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
     <script src="https://kit.fontawesome.com/ce734bd7c8.js" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="src/js/index.js" defer></script>
 
     <title>InfiCine</title>
@@ -184,27 +186,27 @@
                         <br>
                         <div class="choice-box">
                             <label>
-                                <input type="radio" name="opcao" value="opcao1">
+                                <input id="radioOption" type="radio" name="opcao" value="opcao1">
                                 <span></span>
                                 14:30
                             </label>
                             <label>
-                                <input type="radio" name="opcao" value="opcao2">
+                                <input id="radioOption" type="radio" name="opcao" value="opcao2">
                                 <span></span>
                                 16:10
                             </label>
                             <label>
-                                <input type="radio" name="opcao" value="opcao2">
+                                <input id="radioOption" type="radio" name="opcao" value="opcao2">
                                 <span></span>
                                 18:20
                             </label>
                             <label>
-                                <input type="radio" name="opcao" value="opcao3">
+                                <input id="radioOption" type="radio" name="opcao" value="opcao3">
                                 <span></span>
                                 20:50
                             </label>
                             <label>
-                                <input type="radio" name="opcao" value="opcao3">
+                                <input id="radioOption" type="radio" name="opcao" value="opcao3">
                                 <span></span>
                                 21:45
                             </label>
@@ -218,23 +220,29 @@
                         <span id="closeModalTicket" class="close">&times;</span>
                         <div class="quantity-selector">
                             <h2>Interestelar</h2>
-                            <label>
+                            <label id="ticketLabel" data-price="12">
                                 <p>Ingresso Meia - R$ 12,00</p>
                                 <button class="quantity-button decrease">-</button>
-                                <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                                <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                                 <button class="quantity-button increase">+</button>
                             </label>
-                            <label>
+                            <label id="ticketLabel" data-price="24">
                                 <p>Ingresso Inteiro - R$ 24,00</p>
                                 <button class="quantity-button decrease">-</button>
-                                <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                                <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
+                                <button class="quantity-button increase">+</button>
+                            </label>
+                            <label id="ticketLabel" data-price="12">
+                                <p>Ingresso Professor - R$ 12,00</p>
+                                <button class="quantity-button decrease">-</button>
+                                <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                                 <button class="quantity-button increase">+</button>
                             </label>
                             <label>
-                                <p>Ingresso Professor - R$ 12,00</p>
-                                <button class="quantity-button decrease">-</button>
-                                <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
-                                <button class="quantity-button increase">+</button>
+                                <p>Total de ingressos: <span id="quantityTickets">0</span></p>
+                            </label>
+                            <label>
+                                <p>Valor Total: <span id="ticketValue">0,00</span></p>
                             </label>
                             <button class="continue-button">Continue</button>
                         </div>
@@ -250,27 +258,27 @@
                         <br>
                         <div class="choice-box">
                             <label>
-                                <input type="radio" name="opcao" value="opcao1">
+                                <input id="radioOption" type="radio" name="opcao" value="opcao1">
                                 <span></span>
                                 14:30
                             </label>
                             <label>
-                                <input type="radio" name="opcao" value="opcao2">
+                                <input id="radioOption" type="radio" name="opcao" value="opcao2">
                                 <span></span>
                                 16:10
                             </label>
                             <label>
-                                <input type="radio" name="opcao" value="opcao2">
+                                <input id="radioOption" type="radio" name="opcao" value="opcao2">
                                 <span></span>
                                 18:20
                             </label>
                             <label>
-                                <input type="radio" name="opcao" value="opcao3">
+                                <input id="radioOption" type="radio" name="opcao" value="opcao3">
                                 <span></span>
                                 20:50
                             </label>
                             <label>
-                                <input type="radio" name="opcao" value="opcao3">
+                                <input id="radioOption" type="radio" name="opcao" value="opcao3">
                                 <span></span>
                                 21:45
                             </label>
@@ -283,23 +291,29 @@
                         <span id="closeModalTicket" class="close">&times;</span>
                         <div class="quantity-selector">
                             <h2>Rei Leão</h2>
-                            <label>
+                            <label id="ticketLabel" data-price="12">
                                 <p>Ingresso Meia - R$ 12,00</p>
                                 <button class="quantity-button decrease">-</button>
-                                <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                                <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                                 <button class="quantity-button increase">+</button>
                             </label>
-                            <label>
+                            <label id="ticketLabel" data-price="24">
                                 <p>Ingresso Inteiro - R$ 24,00</p>
                                 <button class="quantity-button decrease">-</button>
-                                <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                                <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
+                                <button class="quantity-button increase">+</button>
+                            </label>
+                            <label id="ticketLabel" data-price="12">
+                                <p>Ingresso Professor - R$ 12,00</p>
+                                <button class="quantity-button decrease">-</button>
+                                <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                                 <button class="quantity-button increase">+</button>
                             </label>
                             <label>
-                                <p>Ingresso Professor - R$ 12,00</p>
-                                <button class="quantity-button decrease">-</button>
-                                <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
-                                <button class="quantity-button increase">+</button>
+                                <p>Total de ingressos: <span id="quantityTickets">0</span></p>
+                            </label>
+                            <label>
+                                <p>Valor Total: <span id="ticketValue">0,00</span></p>
                             </label>
                             <button class="continue-button">Continue</button>
                         </div>
@@ -315,27 +329,27 @@
                     <br>
                     <div class="choice-box">
                         <label>
-                            <input type="radio" name="opcao" value="opcao1">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao1">
                             <span></span>
                             14:30
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao2">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao2">
                             <span></span>
                             16:10
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao2">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao2">
                             <span></span>
                             18:20
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao3">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao3">
                             <span></span>
                             20:50
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao3">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao3">
                             <span></span>
                             21:45
                         </label>
@@ -348,23 +362,29 @@
                     <span id="closeModalTicket" class="close">&times;</span>
                     <div class="quantity-selector">
                         <h2>Velozes e Furiosos</h2>
-                        <label>
+                        <label id="ticketLabel" data-price="12">
                             <p>Ingresso Meia - R$ 12,00</p>
                             <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                             <button class="quantity-button increase">+</button>
                         </label>
-                        <label>
+                        <label id="ticketLabel" data-price="24">
                             <p>Ingresso Inteiro - R$ 24,00</p>
                             <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label id="ticketLabel" data-price="12">
+                            <p>Ingresso Professor - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                             <button class="quantity-button increase">+</button>
                         </label>
                         <label>
-                            <p>Ingresso Professor - R$ 12,00</p>
-                            <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
-                            <button class="quantity-button increase">+</button>
+                            <p>Total de ingressos: <span id="quantityTickets">0</span></p>
+                        </label>
+                        <label>
+                            <p>Valor Total: <span id="ticketValue">0,00</span></p>
                         </label>
                         <button class="continue-button">Continue</button>
                     </div>
@@ -381,27 +401,27 @@
                     <br>
                     <div class="choice-box">
                         <label>
-                            <input type="radio" name="opcao" value="opcao1">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao1">
                             <span></span>
                             14:30
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao2">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao2">
                             <span></span>
                             16:10
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao2">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao2">
                             <span></span>
                             18:20
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao3">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao3">
                             <span></span>
                             20:50
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao3">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao3">
                             <span></span>
                             21:45
                         </label>
@@ -414,23 +434,29 @@
                     <span id="closeModalTicket" class="close">&times;</span>
                     <div class="quantity-selector">
                         <h2>Gente Grande 2</h2>
-                        <label>
+                        <label id="ticketLabel" data-price="12">
                             <p>Ingresso Meia - R$ 12,00</p>
                             <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                             <button class="quantity-button increase">+</button>
                         </label>
-                        <label>
+                        <label id="ticketLabel" data-price="24">
                             <p>Ingresso Inteiro - R$ 24,00</p>
                             <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label id="ticketLabel" data-price="12">
+                            <p>Ingresso Professor - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                             <button class="quantity-button increase">+</button>
                         </label>
                         <label>
-                            <p>Ingresso Professor - R$ 12,00</p>
-                            <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
-                            <button class="quantity-button increase">+</button>
+                            <p>Total de ingressos: <span id="quantityTickets">0</span></p>
+                        </label>
+                        <label>
+                            <p>Valor Total: <span id="ticketValue">0,00</span></p>
                         </label>
                         <button class="continue-button">Continue</button>
                     </div>
@@ -447,27 +473,27 @@
                     <br>
                     <div class="choice-box">
                         <label>
-                            <input type="radio" name="opcao" value="opcao1">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao1">
                             <span></span>
                             14:30
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao2">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao2">
                             <span></span>
                             16:10
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao2">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao2">
                             <span></span>
                             18:20
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao3">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao3">
                             <span></span>
                             20:50
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao3">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao3">
                             <span></span>
                             21:45
                         </label>
@@ -480,23 +506,29 @@
                     <span id="closeModalTicket" class="close">&times;</span>
                     <div class="quantity-selector">
                         <h2>Rambo (2008)</h2>
-                        <label>
+                        <label id="ticketLabel" data-price="12">
                             <p>Ingresso Meia - R$ 12,00</p>
                             <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                             <button class="quantity-button increase">+</button>
                         </label>
-                        <label>
+                        <label id="ticketLabel" data-price="24">
                             <p>Ingresso Inteiro - R$ 24,00</p>
                             <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label id="ticketLabel" data-price="12">
+                            <p>Ingresso Professor - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                             <button class="quantity-button increase">+</button>
                         </label>
                         <label>
-                            <p>Ingresso Professor - R$ 12,00</p>
-                            <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
-                            <button class="quantity-button increase">+</button>
+                            <p>Total de ingressos: <span id="quantityTickets">0</span></p>
+                        </label>
+                        <label>
+                            <p>Valor Total: <span id="ticketValue">0,00</span></p>
                         </label>
                         <button class="continue-button">Continue</button>
                     </div>
@@ -512,27 +544,27 @@
                     <br>
                     <div class="choice-box">
                         <label>
-                            <input type="radio" name="opcao" value="opcao1">
+                            <input id="radioOption" id="radioOption" type="radio" name="opcao" value="opcao1">
                             <span></span>
                             14:30
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao2">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao2">
                             <span></span>
                             16:10
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao2">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao2">
                             <span></span>
                             18:20
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao3">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao3">
                             <span></span>
                             20:50
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao3">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao3">
                             <span></span>
                             21:45
                         </label>
@@ -545,23 +577,29 @@
                     <span id="closeModalTicket" class="close">&times;</span>
                     <div class="quantity-selector">
                         <h2>Wall-e</h2>
-                        <label>
+                        <label id="ticketLabel" data-price="12">
                             <p>Ingresso Meia - R$ 12,00</p>
                             <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                             <button class="quantity-button increase">+</button>
                         </label>
-                        <label>
+                        <label id="ticketLabel" data-price="24">
                             <p>Ingresso Inteiro - R$ 24,00</p>
                             <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label id="ticketLabel" data-price="12">
+                            <p>Ingresso Professor - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                             <button class="quantity-button increase">+</button>
                         </label>
                         <label>
-                            <p>Ingresso Professor - R$ 12,00</p>
-                            <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
-                            <button class="quantity-button increase">+</button>
+                            <p>Total de ingressos: <span id="quantityTickets">0</span></p>
+                        </label>
+                        <label>
+                            <p>Valor Total: <span id="ticketValue">0,00</span></p>
                         </label>
                         <button class="continue-button">Continue</button>
                     </div>
@@ -578,27 +616,27 @@
                     <br>
                     <div class="choice-box">
                         <label>
-                            <input type="radio" name="opcao" value="opcao1">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao1">
                             <span></span>
                             14:30
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao2">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao2">
                             <span></span>
                             16:10
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao2">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao2">
                             <span></span>
                             18:20
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao3">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao3">
                             <span></span>
                             20:50
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao3">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao3">
                             <span></span>
                             21:45
                         </label>
@@ -611,23 +649,29 @@
                     <span id="closeModalTicket" class="close">&times;</span>
                     <div class="quantity-selector">
                         <h2>American Pie</h2>
-                        <label>
+                        <label id="ticketLabel" data-price="12">
                             <p>Ingresso Meia - R$ 12,00</p>
                             <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                             <button class="quantity-button increase">+</button>
                         </label>
-                        <label>
+                        <label id="ticketLabel" data-price="24">
                             <p>Ingresso Inteiro - R$ 24,00</p>
                             <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label id="ticketLabel" data-price="12">
+                            <p>Ingresso Professor - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                             <button class="quantity-button increase">+</button>
                         </label>
                         <label>
-                            <p>Ingresso Professor - R$ 12,00</p>
-                            <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
-                            <button class="quantity-button increase">+</button>
+                            <p>Total de ingressos: <span id="quantityTickets">0</span></p>
+                        </label>
+                        <label>
+                            <p>Valor Total: <span id="ticketValue">0,00</span></p>
                         </label>
                         <button class="continue-button">Continue</button>
                     </div>
@@ -644,27 +688,27 @@
                     <br>
                     <div class="choice-box">
                         <label>
-                            <input type="radio" name="opcao" value="opcao1">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao1">
                             <span></span>
                             14:30
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao2">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao2">
                             <span></span>
                             16:10
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao2">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao2">
                             <span></span>
                             18:20
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao3">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao3">
                             <span></span>
                             20:50
                         </label>
                         <label>
-                            <input type="radio" name="opcao" value="opcao3">
+                            <input id="radioOption" type="radio" name="opcao" value="opcao3">
                             <span></span>
                             21:45
                         </label>
@@ -677,23 +721,29 @@
                     <span id="closeModalTicket" class="close">&times;</span>
                     <div class="quantity-selector">
                         <h2>Chuck: O boneco assassino</h2>
-                        <label>
+                        <label id="ticketLabel" data-price="12">
                             <p>Ingresso Meia - R$ 12,00</p>
                             <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                             <button class="quantity-button increase">+</button>
                         </label>
-                        <label>
+                        <label id="ticketLabel" data-price="24">
                             <p>Ingresso Inteiro - R$ 24,00</p>
                             <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
+                            <button class="quantity-button increase">+</button>
+                        </label>
+                        <label id="ticketLabel" data-price="12">
+                            <p>Ingresso Professor - R$ 12,00</p>
+                            <button class="quantity-button decrease">-</button>
+                            <input type="number" class="quantity-input quantity" value="0" min="0" max="10">
                             <button class="quantity-button increase">+</button>
                         </label>
                         <label>
-                            <p>Ingresso Professor - R$ 12,00</p>
-                            <button class="quantity-button decrease">-</button>
-                            <input type="number" class="quantity-input quantity" value="1" min="1" max="10">
-                            <button class="quantity-button increase">+</button>
+                            <p>Total de ingressos: <span id="quantityTickets">0</span></p>
+                        </label>
+                        <label>
+                            <p>Valor Total: <span id="ticketValue">0,00</span></p>
                         </label>
                         <button class="continue-button">Continue</button>
                     </div>

@@ -25,7 +25,7 @@ function changeSlide() {
 setInterval(changeSlide, intervalTime);
 
 // Elementos e Eventos dos Modals
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Modals Tela
     const modal = document.querySelectorAll('#modalHour');
     const openModal = document.querySelectorAll('#openModal');
@@ -33,71 +33,120 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalTicket = document.querySelectorAll('#modalTicket');
     const closeModalTicket = document.querySelectorAll('#closeModalTicket');
     const continueButtonEl = document.querySelectorAll('#continueButton')
+    const radioOptionEl = document.querySelectorAll('#radioOption');
 
-    console.log(continueButtonEl)
+    radioOptionEl.forEach((radio) => {
+        console.log(radio.checked)
+    })
 
     closeModal.forEach((btn, index) => {
-        btn.addEventListener('click', () =>{
+        btn.addEventListener('click', () => {
             modal[index].style.display = 'none';
         });
     });
-    
+
     openModal.forEach((btn, index) => {
-        btn.addEventListener('click', () =>{
+        btn.addEventListener('click', () => {
             modal[index].style.display = 'flex';
         });
     });
-    
+
     continueButtonEl.forEach((btn, index) => {
         btn.addEventListener('click', () => {
-            modal[index].style.display = 'none';
-            modalTicket[index].style.display = 'flex';
-        });
-    });
 
-    closeModalTicket.forEach((btn, index) => {
-        btn.addEventListener('click', () =>{
-            modalTicket[index].style.display = 'none';
-        });
-    });
+            const selectedRadio = Array.from(radioOptionEl).some(radio => radio.checked)
 
-     // Seleciona os elementos do DOM
-     const quantityInput = document.querySelectorAll('.quantity');
-     const decreaseButton = document.querySelectorAll('.decrease');
-     const increaseButton = document.querySelectorAll('.increase');
-
-     console.log(quantityInput)
-     console.log(decreaseButton)
-     console.log(increaseButton)
-
-     decreaseButton.forEach((btn, index) => {
-        btn.addEventListener('click', () => {
-            let currentValue = parseInt(quantityInput[index].value);
-            if (currentValue > 1) {
-                quantityInput[index].value = currentValue - 1;
-                console.log(quantityInput[index].value)
+            if (selectedRadio) {
+                modal[index].style.display = 'none';
+                modalTicket[index].style.display = 'flex';
+                radioOptionEl.forEach((radio) => {
+                    radio.checked = false;
+                })
+            } else {
+                Swal.fire({
+                    title: "Erro!",
+                    text: "É necessário selecionar uma sessão",
+                    icon: "error",
+                    confirmButtonText: "OK",
+                });
             }
         });
-     });
+    });
 
-     increaseButton.forEach((btn, index) => {
+
+    closeModalTicket.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            modalTicket[index].style.display = 'none';
+            totalTickets.forEach((tickets) => {
+                tickets.innerHTML = 0;
+            })
+            totalValue.forEach((total) => {
+                var nada = 0;
+                total.innerHTML = nada.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+            })
+            quantityInput.forEach((input) => {
+                input.value = 0;
+            })
+        });
+    });
+
+    // Seleciona os elementos do DOM
+    const quantityInput = document.querySelectorAll('.quantity');
+    const decreaseButton = document.querySelectorAll('.decrease');
+    const increaseButton = document.querySelectorAll('.increase');
+    const ticketLabel = document.querySelectorAll('#ticketLabel');
+    const totalTickets = document.querySelectorAll('#quantityTickets');
+    const totalValue = document.querySelectorAll('#ticketValue');
+
+    function attValues() {
+
+        let totalIngressos = 0;
+        let valorTotal = 0;
+
+        ticketLabel.forEach((ticketLabel) => {
+            const quantidade = parseInt(ticketLabel.querySelector(".quantity").value);
+            const preco = parseFloat(ticketLabel.dataset.price);
+
+            totalIngressos += quantidade;
+            valorTotal += quantidade * preco;
+        });
+
+        totalTickets.forEach((tickets) => {
+            tickets.innerHTML = totalIngressos;
+        })
+        totalValue.forEach((total) => {
+            total.innerHTML = valorTotal.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+        })
+    }
+
+    decreaseButton.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            let currentValue = parseInt(quantityInput[index].value);
+            if (currentValue > 0) {
+                quantityInput[index].value = currentValue - 1;
+                attValues();
+            }
+        });
+    });
+
+    increaseButton.forEach((btn, index) => {
         btn.addEventListener('click', () => {
             let currentValue = parseInt(quantityInput[index].value);
             if (currentValue < 10) {
                 quantityInput[index].value = currentValue + 1;
-                console.log(quantityInput[index].value)
+                attValues();
             }
         });
-     });
+    });
 
-     quantityInput.forEach((btn, index) => {
+    quantityInput.forEach((btn, index) => {
         btn.addEventListener('input', () => {
             let value = parseInt(quantityInput[index].value);
-            if (value < 1) quantityInput[index].value = 1;
+            if (value < 0) quantityInput[index].value = 1;
             if (value > 10) quantityInput[index].value = 10;
-            console.log(quantityInput[index].value)
+            attValues();
         });
-     });
+    });
 });
 
 // Presquisa
@@ -123,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         setInterval(() => {
-          
+
             if (searchInput.value === "") {
                 slider.style.display = "block";
                 homeSection.style.minHeight = 100 + "vh";

@@ -1,46 +1,33 @@
-const USER = "admin";
-const PASS = "1234";
-
-document.getElementById("loginForm").addEventListener("submit", function (event) {
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
     event.preventDefault();
 
     const username = document.getElementById("user").value;
     const password = document.getElementById("password").value;
 
-    if (username === USER && password === PASS) {
-        Swal.fire({
-            title: "Sucesso!",
-            text: "Você fez login com sucesso.",
-            icon: "success",
-            confirmButtonText: "OK",
-        });
+    const storedUsername = localStorage.getItem("userName");
+    const storedPassword = localStorage.getItem("userPassword");
 
-        const storedUsername = localStorage.getItem("userName");
-        const storedPassword = localStorage.getItem("userPassword");
+    if (username === storedUsername && password === storedPassword) {
+      Swal.fire({
+        title: "Sucesso!",
+        text: "Você fez login com sucesso.",
+        icon: "success",
+        confirmButtonText: "OK",
+      });
 
-        if (username === storedUsername && password === storedPassword) {
-            localStorage.setItem("isLogged", true)  
-            
-            setTimeout(() => {
-                window.location.href = "/index.html";
-            }, 3000);
-        } else {
-            Swal.fire({
-                title: "Erro!",
-                text: "Usuário ou senha incorretos.",
-                icon: "error",
-                confirmButtonText: "OK",
-            });
-        }
+      localStorage.setItem("isLogged", true);
 
-        
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 3000);
     } else {
-        Swal.fire({
-            title: "Erro!",
-            text: "Preencha todos os campos!.",
-            icon: "error",
-            confirmButtonText: "OK",
-        });
-        localStorage.setItem("isLogged", false)
+      Swal.fire({
+        title: "Erro!",
+        text: "Usuário ou senha incorretos.",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
     }
-});
+  });

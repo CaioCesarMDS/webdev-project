@@ -66,6 +66,16 @@ document.addEventListener('DOMContentLoaded', function () {
                         text: "Você fez compra de seu(s) ingresso(s)!",
                         confirmButtonText: "OK",
                     });
+                    totalTickets.forEach((tickets) => {
+                        tickets.innerHTML = 0;
+                    })
+                    totalValue.forEach((total) => {
+                        var nada = 0;
+                        total.innerHTML = nada.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+                    })
+                    quantityInput.forEach((input) => {
+                        input.value = 0;
+                    })
                 })
             } else {
                 Swal.fire({
@@ -166,6 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
         totalValue.forEach((total) => {
             total.innerHTML = valorTotal.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
         })
+
     }
 
     decreaseButton.forEach((btn, index) => {
